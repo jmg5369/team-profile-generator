@@ -12,7 +12,22 @@ class Manager extends Employee {
         return "Manager"
     }
 
-
+    generateHtmlString() {
+        return `
+        <div class="card" style="width: 18rem;">
+            <div style="background-color: blue !important;" class="text-white card-header">
+               Manager
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">${this.name}</li>
+                <li class="list-group-item">${this.email}</li>
+                <li class="list-group-item">
+                    Office Number: ${this.officeNumber}
+                </li>
+            </ul>
+        </div>
+        `
+    }
 
   
 }
